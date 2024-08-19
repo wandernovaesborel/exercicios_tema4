@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0 0 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: #555;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+
+        item {
+            color: crimson;
+        }
+
+        /* Ajustes de responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            ul {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            ul {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contagem de Números em Sequência</h1>
+        <ul id="lista-numeros"></ul>
+    </div>
+
+    <script>
+
+        const listaNumeros = document.getElementById('lista-numeros');
+
+        for (let i = 1; i <= 10; i++) {
+            console.log("Número: " + i);
+
+            // Criando um novo item de lista para cada número
+            const item = document.createElement('li');
+            item.innerHTML = "> Número: " + "<b><u><i>" + i+ "</i></u></b>";
+            listaNumeros.appendChild(item);
+        }
+    </script>
+</body>
+</html>
